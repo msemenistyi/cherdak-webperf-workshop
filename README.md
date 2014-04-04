@@ -34,6 +34,10 @@ npm install -g grunt-cli
 	- minify html, css, js
 	- crop, optimize images
 - Enable gzipping on the server([compress method](http://expressjs.com/3x/api.html))
+- Deal with inline images
+- Remove redundant styles and scripts
+- Follow right order of styles and scripts definition
+- avoid redirects
 - Enable webp serving (jpeg - 2.61 MB, - webp 1.73MB) 
 [connect-image-optimus](https://github.com/msemenistyi/connect-image-optimus)
 - Disable animations on scroll
