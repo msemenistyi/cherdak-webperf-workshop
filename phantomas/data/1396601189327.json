@@ -1,0 +1,152 @@
+{
+  "requests": {
+    "values": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      null
+    ],
+    "sum": 35,
+    "min": 7,
+    "max": 7,
+    "median": 7,
+    "average": 7
+  },
+  "gzipRequests": {
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      null
+    ],
+    "sum": 0,
+    "min": 0,
+    "max": 0,
+    "median": 0,
+    "average": 0
+  },
+  "postRequests": {
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      null
+    ],
+    "sum": 0,
+    "min": 0,
+    "max": 0,
+    "median": 0,
+    "average": 0
+  },
+  "httpsRequests": {
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      null
+    ],
+    "sum": 0,
+    "min": 0,
+    "max": 0,
+    "median": 0,
+    "average": 0
+  },
+  "notFound": {
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      null
+    ],
+    "sum": 0,
+    "min": 0,
+    "max": 0,
+    "median": 0,
+    "average": 0
+  },
+  "timeToFirstByte": {
+    "values": [
+      1006,
+      1011,
+      1015,
+      1016,
+      1025,
+      null
+    ],
+    "sum": 5073,
+    "min": 1006,
+    "max": 1025,
+    "median": 1015,
+    "average": 1014.6
+  },
+  "timeToLastByte": {
+    "values": [
+      1007,
+      1011,
+      1016,
+      1017,
+      1025,
+      null
+    ],
+    "sum": 5076,
+    "min": 1007,
+    "max": 1025,
+    "median": 1016,
+    "average": 1015.2
+  },
+  "bodySize": {
+    "values": [
+      437,
+      437,
+      437,
+      437,
+      437,
+      null
+    ],
+    "sum": 2185,
+    "min": 437,
+    "max": 437,
+    "median": 437,
+    "average": 437
+  },
+  "contentLength": {
+    "values": [
+      437,
+      437,
+      437,
+      437,
+      437,
+      null
+    ],
+    "sum": 2185,
+    "min": 437,
+    "max": 437,
+    "median": 437,
+    "average": 437
+  },
+  "httpTrafficCompleted": {
+    "values": [
+      1021,
+      1033,
+      1033,
+      1043,
+      1050,
+      null
+    ],
+    "sum": 5180,
+    "min": 1021,
+    "max": 1050,
+    "median": 1033,
+    "average": 1036
+  }
+}
