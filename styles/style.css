@@ -1,0 +1,9 @@
+#header{
+	height: 30px;
+}
+
+#image-gallery{
+	width: 1276px;
+	margin: 0 auto;
+	overflow: hidden;
+}
