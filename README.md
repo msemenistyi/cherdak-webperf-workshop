@@ -13,6 +13,11 @@ git clone https://github.com/msemenistyi/cherdak-webperf-workshop
 - Go to folder and run node server
 ```shell
 cd cherdak-webperf-workshop
+npm install
+```
+
+- Start server
+```shell
 node index.js
 ```
 
