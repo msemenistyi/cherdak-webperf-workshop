@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/msemenistyi/cherdak-webperf-workshop",
   "dependencies": {
-    "express": "~3.5.1"
+    "express": "~3.5.1",
+    "connect-image-optimus": "~0.1.2"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
