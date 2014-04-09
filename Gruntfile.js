@@ -1,45 +1,41 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		js_files: ['public/javascripts/*.js'],
-		css_files: ['public/styles/*.js'],
+		css_files: ['public/styles/*.css'],
 		html_files: ['public/*.html'],
 		phantomas: {
 			perf : {
 				options : {
 					indexPath : './phantomas/',
 					options   : {},
-					url: 'http://localhost:9999/',
+					url: 'http://localhost:9999/'
 				}
 			}
 		},
 
 		concat: {
-			js: {
-				src: ['<%= js_files %>'],
-				dest: 'public/javascripts/app.concat.js',
-			},
-
 			styles: {
-				//here you should concatenate styles
-			}
-		},
-		
-		uglify: {
-			js: {
-				files: {
-					'public/javascripts/app.min.js': ['<%= js_files %>']
-				}
+                src: ['<%= css_files %>'],
+                dest: 'public/styles/app.css'
 			}
 		},
 
 		cssmin: {
 			minify: {
-				// src: [''],
-				// dest: 'public/styles/',
+				src: 'public/styles/app.css',
+				dest: 'build/styles/app.css'
 				// ext: '.min.css'
 			}
 		},
+
+        uncss: {
+            dist: {
+                files: {
+                    'public/styles/app.css': ['public/index.html']
+                }
+            }
+        },
+
 
 		htmlmin: {
 			dist: {
@@ -48,19 +44,19 @@ module.exports = function (grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					// 'public/index.min.html': []
+					'build/index.min.html': ['<%= html_files %>']
 				}
 			}
 		}
 
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-
+    grunt.loadNpmTasks('grunt-uncss');
 	grunt.loadNpmTasks('grunt-phantomas');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
-	grunt.registerTask('default', ['concat', 'uglify', 'phantomas']);
+	grunt.registerTask('default', ['concat', 'uncss', 'cssmin',  'htmlmin']);
 };
