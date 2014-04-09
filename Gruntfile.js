@@ -18,10 +18,6 @@ module.exports = function (grunt) {
 			js: {
 				src: ['<%= js_files %>'],
 				dest: 'public/javascripts/app.concat.js',
-			},
-
-			styles: {
-				//here you should concatenate styles
 			}
 		},
 		
@@ -33,24 +29,12 @@ module.exports = function (grunt) {
 			}
 		},
 
-		cssmin: {
-			minify: {
-				// src: [''],
-				// dest: 'public/styles/',
-				// ext: '.min.css'
-			}
-		},
-
-		htmlmin: {
-			dist: {
-				options: {
-					removeComments: true,
-					collapseWhitespace: true
-				},
-				files: {
-					// 'public/index.min.html': []
-				}
-			}
+		uncss: {
+		  dist: {
+		    files: {
+		      'public/used.css': ['<%= html_files %>']
+		    }
+		  }
 		}
 
 	});
@@ -61,6 +45,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 	grunt.loadNpmTasks('grunt-phantomas');
+
+	grunt.loadNpmTasks('grunt-uncss');
 
 	grunt.registerTask('default', ['concat', 'uglify', 'phantomas']);
 };
