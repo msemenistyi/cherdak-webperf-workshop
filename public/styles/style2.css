@@ -3,6 +3,7 @@
 	border: 2px solid gray;
 	float: left;
 	margin: 10px;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .image:hover{
